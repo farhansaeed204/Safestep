@@ -1,25 +1,81 @@
 {
   "expo": {
-    "name": "virtualeye",
-    "slug": "virtualeye",
+    "name": "SafeStep",
+    "slug": "virtual-eye",
+    "scheme": "virtualeye",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#F2F2F7",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.virtualeye.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "SafeStep uses the camera to detect obstacles and guide you safely.",
+        "NSMicrophoneUsageDescription": "SafeStep uses the microphone for voice commands.",
+        "NSSpeechRecognitionUsageDescription": "SafeStep uses speech recognition to understand your voice commands."
+      }
     },
     "android": {
+      "package": "com.virtualeye.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#FFFFFF",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.VIBRATE"
+      ],
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#F2F2F7"
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "SafeStep uses the microphone for voice commands.",
+          "speechRecognitionPermission": "SafeStep uses speech recognition to understand your voice commands."
+        }
+      ],
+      "react-native-fast-tflite",
+      "expo-asset",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "930d4215-4016-438c-b711-b72812448fa5"
+      }
+    },
+    "owner": "muhammad_farhan14"
   }
 }

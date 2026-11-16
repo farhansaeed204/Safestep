@@ -1,0 +1,13 @@
+# Normalize text files to LF, keep binaries untouched.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.tflite binary
+*.wav binary
+*.mp3 binary
+*.ttf binary
+*.otf binary

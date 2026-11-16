@@ -1,0 +1,7 @@
+PLACEHOLDER — not a real TensorFlow Lite model.
+
+Replace this file with a real YOLO11n TFLite export trained on your custom
+hazard classes: pothole, manhole, stairs, door, window, wall.
+Input 320x320x3 float32, output [1, 10, 2100].
+
+See MODELS.md in the project root for training steps.

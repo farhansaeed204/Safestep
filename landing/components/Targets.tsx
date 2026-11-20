@@ -43,7 +43,7 @@ export function Targets() {
                 Honest limits
               </span>
               <h3 className="mt-4 text-xl font-semibold text-ink">
-                Built for a hackathon, tuned for real use
+                Built for a Build2Launch, tuned for real use
               </h3>
               <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-ink-2">
                 <li className="flex gap-2.5">
